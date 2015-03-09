@@ -5,6 +5,7 @@ from qproj.question.api import CommentResource
 
 post_resource=PostResource()
 comment_resource=CommentResource()
+
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'qproj.views.home', name='home'),
