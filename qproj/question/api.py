@@ -4,9 +4,9 @@ from tastypie.authorization import Authorization
 from tastypie import fields
 
 class PostResource(ModelResource):
-    author = fields.CharField(attribute="author", use_in="list");
-    title = fields.CharField(attribute="title", use_in="list");
-    text = fields.CharField(attribute="text", use_in="list");
+    author = fields.CharField(attribute="author");
+    title = fields.CharField(attribute="title");
+    text = fields.CharField(attribute="text");
     comment=fields.ToManyField('qproj.question.api.CommentResource','comment_set',null=True,use_in="detail",full=True);
 
     class Meta:
