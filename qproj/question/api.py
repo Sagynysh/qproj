@@ -7,7 +7,7 @@ class PostResource(ModelResource):
     author = fields.CharField(attribute="author", use_in="list");
     title = fields.CharField(attribute="title", use_in="list");
     text = fields.CharField(attribute="text", use_in="list");
-    comment=fields.ToManyField('qproj.question.api.CommentResource','comment_set',null=True,use_in="detail");
+    comment=fields.ToManyField('qproj.question.api.CommentResource','comment_set',null=True,use_in="detail",full=True);
 
     class Meta:
         queryset = models.Post.objects.all()
